@@ -1,10 +1,13 @@
+import uuid from 'uuid'
+
 export default function manageBand(state = {
   bands: []
 }, action) {
   switch (action.type) {
     case 'ADD_BAND':
       const band = {
-        id: Math.random() * 10000000000000000,
+        // id: Math.random() * 10000000000000000,
+        id: uuid(),
         text: action.name
       }
       return { ...state, bands: [...state.bands, band] }
