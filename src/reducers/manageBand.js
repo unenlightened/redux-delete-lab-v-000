@@ -5,7 +5,7 @@ export default function manageBand(state = {
     case 'ADD_BAND':
       const band = {
         id: Math.random * 10000000000000000,
-        name: action.name
+        text: action.name
       }
       return { ...state, bands: [...state.bands, band] }
     
